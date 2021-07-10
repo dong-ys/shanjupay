@@ -1,0 +1,37 @@
+server:
+  port: 56010 #启动端口 命令行注入
+  max-http-header-size: 100KB
+
+nacos:
+  server:
+    addr: 127.0.0.1:8848
+
+spring:
+  application:
+    name: gateway-service
+  main:
+    allow-bean-definition-overriding: true # Spring Boot 2.1 需要设定
+  cloud:
+    nacos:
+      discovery:
+        server-addr: ${nacos.server.addr}
+        namespace: 22405b94-7719-46ec-a487-061b400d77e3
+        cluster-name: DEFAULT
+      config:
+        server-addr: ${nacos.server.addr} # 配置中心地址
+        file-extension: yaml
+        namespace: 22405b94-7719-46ec-a487-061b400d77e3
+        group: SHANJUPAY_GROUP # 聚合支付业务组
+        ext-config:
+           -
+             refresh: true
+             data-id: jwt.yaml # jwt配置
+             group: COMMON_GROUP # 通用配置组
+
+
+logging:
+  config: classpath:log4j2.xml
+
+
+
+

@@ -1,0 +1,9 @@
+server:
+  servlet:
+    context-path: /uaa
+spring:
+  datasource:
+    druid:
+      url: jdbc:mysql://127.0.0.1:3307/shanjupay_uaa?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false
+      username: root
+      password: root

@@ -1,0 +1,14 @@
+server:
+  servlet:
+    context-path: /transaction
+spring:
+  datasource:
+    druid:
+      url: jdbc:mysql://127.0.0.1:3307/shanjupay_transaction?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false
+      username: root
+      password: root
+mybatis-plus:
+  typeAliasesPackage: com.shanjupay.transaction.entity
+  mapper-locations: classpath:com/shanjupay/*/mapper/*.xml
+shanjupay:
+  payurl: "http://192.168.2.149:56010/transaction/pay-entry"

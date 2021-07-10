@@ -1,0 +1,15 @@
+server:
+  servlet:
+    context-path: /user
+spring:
+  datasource:
+    druid:
+      url: jdbc:mysql://127.0.0.1:3307/shanjupay_user?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false
+      username: root
+      password: root
+mybatis-plus:
+  typeAliasesPackage: com.shanjupay.user.entity
+  mapper-locations: classpath:com/shanjupay/*/mapper/xml/*.xml
+sms:
+  url: "http://localhost:56085/sailing"
+  effectiveTime: 6000

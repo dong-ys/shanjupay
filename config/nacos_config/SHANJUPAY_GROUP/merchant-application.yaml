@@ -1,0 +1,18 @@
+server:
+  servlet:
+    context-path: /merchant
+swagger:
+  enable: true
+sms:
+  url: "http://localhost:56085/sailing"
+  effectiveTime: 600
+oss:
+  qiniu:
+    url: "http://quulrz3vx.hd-bkt.clouddn.com/"
+    accessKey: "GFoUrDSZejTDpEbjZhKv5DISfukm0leiBuzo_1k-"
+    secretKey: "j9vDdcHOH8e2mVKNbEmYsqTKYHUlSv9jnzFSPnAv"
+    bucket: "shanjupay-dys"
+shanjupay:
+  c2b:
+    subject: "%s商品"
+    body: "向%s付款"

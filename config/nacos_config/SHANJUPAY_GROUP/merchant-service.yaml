@@ -1,0 +1,11 @@
+server:
+  servlet:
+    context-path: /merchant-service
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3307/shanjupay_merchant_service?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false
+    username: root
+    password: root
+myabtis-plus:
+  typeAliasesPackage: com.shanjupay.merchant.entity
+  mapper-locations: classpath:com/shanjupay/*/mapper/*.xml

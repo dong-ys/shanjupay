@@ -1,0 +1,12 @@
+mybatis-plus:
+  configuration:
+    cache-enabled: false
+    map-underscore-to-camel-case: true
+  global-config:
+    db-config:
+      column-like: true
+      id-type: auto
+      field-strategy: ignored
+      table-underline: true
+  type-aliases-package: com.shanjupay.user.entity
+  mapper-locations: classpath:com/shanjupay/*/mapper/*.xml

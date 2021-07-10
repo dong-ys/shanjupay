@@ -1,0 +1,20 @@
+spring:
+  http:
+    encoding:
+      charset: UTF-8
+      force: true
+      enabled: true
+    messages:
+      encoding: UTF-8
+server:
+  tomcat:
+    remote_ip_header: x-forwarded-for
+    protocol_header: x-forwarded-proto
+  servlet:
+    context-path: /
+  use-forward-headers: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh,health,info,env
